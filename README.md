@@ -12,7 +12,7 @@ A fun and interactive Rock Paper Scissors game built using HTML, CSS (TailwindCS
 
 
 📌 Live Demo
-[👉 Play the Game](rock-papers-scissorsgame.netlify.app)
+[👉 Play the Game](https://rock-papers-scissorsgame.netlify.app/)
 
 🛠️ Technologies Used
 HTML5
