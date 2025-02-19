@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <meta name="description" content="Its a game website for rock,paper and scissor game which is made from html css(tailwind) and javascript(vanilla). I hope you all will enjoy the game">
+    <meta name="keywords" content="game, childhoodGame, rock paper scissor">
+    <meta name="author" content="Yash Tiwari">
+
+    <link rel="stylesheet" href="/src/output.css">
+    <style>
+        .text-shadow {
+            text-shadow: 0 0 5px rgb(0, 119, 198);
+        }
+
+        .btn-press {
+            transition: 0.3s ease-in-out;
+            border: 2px solid transparent;
+            box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.1);
+
+            &:hover {
+                box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+                transform: scale(1.05);
+            }
+
+            &:active {
+                box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.8);
+                transform: scale(0.95);
+            }
+
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+
+    <header
+        class="3xs:text-xl 2xs:text-2xl xs:text-3xl sm:text-4xl font-bold text-[#183145] h-[75px] flex items-center justify-center bg-blue-400">
+        <h1 class="text-shadow">Rock Papers Scissors with Computer</h1>
+    </header>
+
+    <main class="max-w-[1250px] mx-auto flex flex-col items-center">
+        <button class="bg-blue-200 text-black py-2 px-5 rounded-4xl mt-5 resetBtn btn-press">Reset The Tour</button>
+        <div
+            class="3xs:flex-row flex-col items-center flex justify-between lg:px-[200px] md1:px-[150px] md2:px-[100px] md:px-[60px] px-5 w-full mt-10">
+            <p class="xs:text-2xl 1xs:text-xl 2xs:text-lg playerGlow">Player Score : <span class="player">0</span></p>
+            <p class="xs:text-2xl 1xs:text-xl 2xs:text-lg drawGlow">Draw : <span class="draw">0</span></p>
+            <p class="xs:text-2xl 1xs:text-xl 2xs:text-lg computerGlow">Computer Score : <span class="computer">0</span>
+            </p>
+        </div>
+        <div class="mt-15">
+            <p class="sm:text-5xl 1xs:text-4xl 3xs:text-3xl text-2xl uppercase text-blue-500 font-bold winner">
+                Let's Play!</p>
+        </div>
+        <div class="mt-10">
+            <img src="/Images/paper3.png" alt="PaperImg"
+                class="paperImg inline h-auto 2xs:w-[150px] 3xs:w-[100px] w-[75px] text-white">
+            <img src="/Images/stone.png" alt="StoneImg"
+                class="rockImg  hidden h-auto 2xs:w-[150px] 3xs:w-[100px] w-[75px] text-white">
+            <img src="/Images/scissors.png" alt="ScissorsImg"
+                class="scissorImg  hidden h-auto 2xs:w-[150px] 3xs:w-[100px] w-[75px] text-white">
+            <span class="3xs:mx-10 mx-7 font-bold text-2xl">VS</span>
+            <img src="/Images/paperreverse.png" alt="PaperImg"
+                class="paperImgCompt inline h-auto 2xs:w-[150px] 3xs:w-[100px] w-[75px] text-white">
+            <img src="/Images/stonereverse.png" alt="StoneImg"
+                class="rockImgCompt hidden h-auto 2xs:w-[150px] 3xs:w-[100px] w-[75px] text-white">
+            <img src="/Images/scissorsreverse.png" alt="ScissorImg"
+                class="scissorImgCompt hidden h-auto 2xs:w-[150px] 3xs:w-[100px] w-[75px] text-white">
+        </div>
+        <div class="mt-15">
+            <p class="text-gray-500 3xs:text-xl 4xs:text-lg">Chose your move, rock paper or scissors?</p>
+        </div>
+        <div class="mt-10 btns flex flex-wrap justify-center items-center content-center gap-x-6 gap-y-4">
+            <button
+                class="bg-blue-600 md:text-2xl 2xs:font-semibold 2sm:py-3 2sm:px-13 1xs:py-3 2xs:px-6 2xs:py-2 7xs:px-4 px-6 py-2  1xs:px-8 rounded-2xl 3xs:m-5 6xs:m-2 2sm:text-xl 2xs:text-lg rockBtn btn-press">ROCK</button>
+            <button
+                class="bg-blue-600 md:text-2xl 2xs:font-semibold 2sm:py-3 2sm:px-13 1xs:py-3 2xs:px-6 2xs:py-2 7xs:px-4 px-6 py-2  1xs:px-8 rounded-2xl 3xs:m-5 6xs:m-2  2sm:text-xl 2xs:text-lg paperBtn btn-press">PAPER</button>
+            <button
+                class="bg-blue-600 md:text-2xl 2xs:font-semibold 2sm:py-3 2sm:px-13 1xs:py-3 2xs:px-6 2xs:py-2 7xs:px-4 px-6 py-2  1xs:px-8 rounded-2xl 3xs:m-5 6xs:m-2 2sm:text-xl 2xs:text-lg scissorBtn btn-press">SCISSORS</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+
+    </audio>
+</body>
+
+</html>

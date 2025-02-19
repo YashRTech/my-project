@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-6xs: 264px;
+  --breakpoint-7xs: 312px;
+  --breakpoint-4xs: 345px;
+  --breakpoint-3xs: 386px;
+  --breakpoint-5xs: 420px;
+  --breakpoint-2xs: 467px;
+  --breakpoint-1xs: 533px;
+  --breakpoint-xs: 580px;
+  --breakpoint-2sm: 660px;
+  --breakpoint-md1: 891px;
+  --breakpoint-md2: 800px;
+
+  --animate-glow: glow 1s ease-in-out;
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 0px rgba(255, 255, 0, 0);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(255, 255, 0, 1);
+    }
+    100% {
+      box-shadow: 0 0 0px rgba(255, 255, 0, 0);
+    }
+  }
+
+  --animate-shake: shake 0.5s ease-in-out;
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-10px);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  --animate-shake-opposite: shake-opposite 0.5s ease-in-out;
+  @keyframes shake-opposite {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(10px);
+    }
+    50% {
+      transform: translateX(-10px);
+    }
+    75% {
+      transform: translateX(5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  --animate-fade-scale: fade-scale 0.5s linear;
+  @keyframes fade-scale {
+    0% {
+      transform: scale(0);
+      -webkit-transform: scale(0);
+      -moz-transform: scale(0);
+      -ms-transform: scale(0);
+      -o-transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
