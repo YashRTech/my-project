@@ -15,6 +15,7 @@ const computerGlow = document.querySelector(".computerGlow");
 const winSound = new Audio("/soundeffects/gamewin.mp3");
 const loseSound = new Audio("/soundeffects/gamelose.mp3");
 const drawSound = new Audio("/soundeffects/gamedraw.mp3");
+const resetSound= new Audio("/soundeffects/resetsound.mp3");
 
 const playSound = (sound) => {
   sound.currentTime = 0; // Resetting audio to the start
@@ -185,6 +186,9 @@ document.querySelector(".resetBtn").addEventListener("click", () => {
   localStorage.setItem("playerScore", 0);
   localStorage.setItem("computerScore", 0);
   localStorage.setItem("drawScore", 0);
+
+  playSound(resetSound);
+  
 
   winner.innerText = "Let's Play!";
   paperImg.classList.replace("hidden", "inline");
